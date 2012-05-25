@@ -44,14 +44,15 @@ function beginPresentation(data) {
     	Present.showSlide(0);
     	
     	hljs.initHighlightingOnLoad();
+	setupNotes();
     }
     
     $(document).keydown(function( e ) {
-        if (e.keyCode == 36 || e.keyCode == 37) {
+        if (e.keyCode == 37 || e.keyCode == 38) {
             slideRewind();
             return false;
         }
-        if (e.keyCode == 38 || e.keyCode == 39) {
+        if (e.keyCode == 39 || e.keyCode == 40) {
             slideAdvance();
             return false;
         }
@@ -60,18 +61,37 @@ function beginPresentation(data) {
 
 function slideAdvance() {
     Present.nextSlide();
-    $('pre code').each(function( i, e ) {
-        hljs.highlightBlock(e, '    ');
-    });
+    setupCode();
+    setupNotes();
 }
 
 function slideRewind() {
     Present.prevSlide();
+    setupCode();
+    setupNotes();
+}
+
+function setupCode() {
     $('pre code').each(function( i, e ) {
         hljs.highlightBlock(e, '    ');
     });
 }
-
+function setupNotes() {
+    $('blockquote > blockquote').each( function(i,e) {
+	var noteimg = $("<img/>")
+	    .attr("src", "img/notes-icon.png")
+	    .addClass("note-icon")
+	    .toggle(showNote, hideNote);
+	$(e).unwrap().wrap("<div id='note'/>").before(noteimg);
+    });
+}
+function showNote() {
+    $(this).next().show();
+}
+function hideNote() {
+    $(this).next().hide();
+}
+ 
 var filename = location.search && location.search.substr(1).replace(/\+/gi," ");
 
 $(function(){
