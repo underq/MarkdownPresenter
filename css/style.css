@@ -1,4 +1,5 @@
 html, body {
+	height:100%
     margin:0;
     border:0;
     padding:0;
@@ -7,7 +8,8 @@ html, body {
 }
 div.centered {
     margin:auto;
-    font-size:40px;
+	padding:auto;
+	font-size:35px;
     width:20em; /* So we get about 10 words per line */
 }
 .slideCount {
@@ -15,6 +17,8 @@ div.centered {
     bottom: 1em;
     right: 1em;
 }
+
+
 
 #error {
     display: none;
@@ -28,7 +32,7 @@ body {
     text-shadow: #000 0 -2px 0;
 }
 .bg {
-    background-image: url("../img/darkaurora.png");
+    background-image: url("../img/wallpaper-slide.png");
     background-size:100% 100%;
     background-repeat:no-repeat;
     position:absolute;
@@ -39,7 +43,6 @@ body {
     /* opacity:0.01; */
     z-index: -1;
 }
-
 #overlay-right {
     position: absolute;
     top: 0;
@@ -55,6 +58,11 @@ body {
     width: 20%;
     height: 100%;  
     z-index: 10;
+}
+
+h1 {
+	text-align:center;
+	color:#53b0eb;
 }
 
 pre {
@@ -75,6 +83,15 @@ a {
 
 blockquote>blockquote {
     display: none;
+}
+
+blockquote {
+	font-size:0.7em;
+	font-style:italic;
+	margin: 1em 0;
+	border-left: 5px solid #DDD;
+	padding-left: .6em;
+	color: #DCDCDC;
 }
 
 #note {
