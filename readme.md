@@ -9,7 +9,7 @@ Check out a demo [here](http://chrishulbert.github.com/MarkdownPresenter/Present
 
 Installing
 ---
-You need to install this on a web server, otherwise it won't be able to open the presentation.md file via AJAX. So, if you're on a mac, copy it to your ~/Sites/MyPresentation folder. Then open your web browser to http://localhost/~myusername/MyPresentation/Presenter.html.
+You need to install this on a web server, otherwise it won't be able to open the presentation.md file via AJAX. So, if you're on a mac, copy it to your ~/Sites/MyPresentation folder. Then open your web browser to http://localhost/~myusername/MyPresentation/index.html?_NameOfYourPresentation_
 
 Markdown file
 ---
