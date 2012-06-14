@@ -1,7 +1,7 @@
 ﻿Drupal without Views ?
 ======================
 
-![Nescafe](http://zengenuity.com/sites/default/files/drupal_latte_500.jpg)
+![Nescafe](presentations/img/drupal_latte_500.jpg)
 
 ###_What else !_
 
@@ -14,15 +14,15 @@ Combien on reflechit à leur choix ?
 
 !
 
-Drupal Graph
-------------
+Profiling de Drupal
+-------------------
 
 ![Drupal](presentations/img/drupal_work.png)
 
 !
 
-Views Graph
------------
+Profiling de Views
+------------------
 
 ![Views](presentations/img/views_work.png)
 
@@ -37,11 +37,16 @@ Configuration d'exemple
 + MySql : 5.1.59  
 + PHP version : 5.3.9  
 + OS : Windows 7  
+***
++ 603 071 Nodes
++ 341 Users
++ 2 Vocabulaires
++ 3 Terms
 
 !
 
-print 'I use ' . $views;
-========================
+print "What is $views ?";
+=========================
 
 > The Views module provides a flexible method for Drupal site designers to control how lists and tables of content, users, taxonomy terms and other data are presented.
 
@@ -355,3 +360,4 @@ Conclusion
 
 Questions ?
 ===========
+
