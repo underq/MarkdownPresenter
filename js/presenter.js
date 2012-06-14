@@ -97,10 +97,7 @@ var filename = location.search && location.search.substr(1).replace(/\+/gi," ");
 $(function(){
     // Since the presentation may be hidden in different places with
     // different extensions, we make an array of possibilities to request...
-    var urls = [ 'presentations/'+filename+".md",
-                 'presentations/'+filename+".txt",
-                 '/p/'+filename+".md",
-                 '/p/'+filename+".txt", ];
+    var urls = [ 'presentations/'+filename+".md" ];
     loadPresentation(urls, beginPresentation);
     
     $("#overlay-right").click(slideAdvance);
