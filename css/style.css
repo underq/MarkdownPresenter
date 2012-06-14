@@ -1,0 +1,153 @@
+html, body {
+	height:100%
+    margin:0;
+    border:0;
+    padding:0;
+    font-family: helvetica;
+    color: white;
+}
+div.centered {
+    margin:auto;
+	padding:auto;
+	font-size:35px;
+    width:20em; /* So we get about 10 words per line */
+}
+.slideCount {
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+#error {
+    display: none;
+}
+
+/* My styling here */
+body {
+    background: #223;
+    background: -webkit-gradient(linear, left top, left bottom, from(#334), to(#112));
+    background: -moz-linear-gradient(top,  #334,  #112);
+    /*text-shadow: #000 0 -2px 0;*/
+}
+
+img{
+	margin-left:10%;
+}
+
+table{
+	margin:auto;
+	border-collapse:collapse;
+	width:700px;
+	font-size:24.5px;
+}
+th {
+	border:2px solid #888;
+	text-align:center;
+}
+td{
+	border:2px solid #888;
+	text-align:center;
+}
+
+.bg {
+    background-image: url("../img/wallpaper-slide.png");
+    background-size:100% 100%;
+    background-repeat:no-repeat;
+    position:absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    /* opacity:0.01; */
+    z-index: -1;
+}
+#overlay-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 100%;  
+    z-index: 10;
+}
+#overlay-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;  
+    z-index: 10;
+}
+
+.petit {
+	font-size:18px;
+}
+
+h1 {
+	text-align:center;
+	color:#53b0eb;
+}
+h2 {
+	text-align:center;
+	color:#ec8e53;
+}
+
+pre {
+	margin:auto;
+    border: 2px solid #888;
+}
+pre > code {
+    font-size: 60%;
+}
+code {
+    font-size: 80%;
+}
+
+a {
+  color: #def;
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+
+blockquote>blockquote {
+    display: none;
+}
+
+blockquote {
+	font-size:0.7em;
+	font-style:italic;
+	margin: 1em 0;
+	border-left: 5px solid #DDD;
+	padding-left: .6em;
+	color: #DCDCDC;
+}
+
+#note {
+    position: absolute;
+    z-index: 20;
+    bottom: 0px;
+    left: 0px;
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+#note blockquote {
+    display: none;
+    color: #444;
+    background-color: #eee;
+    margin-left: 48px;
+    border: 2px solid #aaa;
+    padding-left: 18px;
+    padding-right: 18px;
+    font-size: 14px;
+    text-shadow: none;
+}
+#note blockquote a {
+    color: blue;
+}
+
+.note-icon {
+    position: absolute;
+    z-index: 30;
+    height: 32px;
+    bottom: 16px;
+    left: 16px;
+}

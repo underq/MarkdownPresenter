@@ -1,0 +1,46 @@
+Bonjour,
+
+Je vais essayer de vous convaincre que views n'est pas indispensable.
+Voir même source de complexité et de probleme.
+
+
+
+Voici un graph du fonctionnement basic du core de drupal
+ - Un appel est fait à la function menu_execute_active_handler c'est le routeur de drupal il redirige chaque page sur la fonction correspondante.
+ - La fonction de generation de la page return un contenu html, un formulaire drupal, ou depuis drupal 7 un render array().
+ - Drupal s'occupe de mettre en page le contenu renvoyer et d'ajouter les blocs.
+ - Il est possible d'agir sur chacune de ces etapes à l'aide de hook.
+
+
+ 
+Views se plug à la suite du menu handler.
+L'utilisation de views double le nombre de function nessecaire pour afficher une page et double si ce n'est triple la complexité d'execution
+et donc de test, debug, d'extention.
+Si pour chaque etape vous avez un hook je vous laisse imaginé la complexité d'affichage d'une page
+
+
+
+Definition officiel de views
+La premier citation dit que views mes à disposition differente methodes pour afficher du contenu sous forme de tableau et de liste.
+La deuxieme citation dit que c'est un outils qui construit execute et affiche automatiquement des requetes. et qu'il dispose d'un mode special que nous allons voir apres :)
+
+
+
+Maintenant qu'on sais tous ce qu'est views et comment il marche je vais mettre le doight sur certain point important qui devrais etre prise en compte quand on choisi d'utilise ou non views.
+1er point : Utilisé des modules qu'on maitrise
+2eme point : la gestion du temps
+3eme point : Un bon developpeur est un developpeur fénéan
+4eme point : Connaitre les cout cacher
+
+
+
+
+
+
+
+
+
+
+ 
+
+
