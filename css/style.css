@@ -17,9 +17,6 @@ div.centered {
     bottom: 1em;
     right: 1em;
 }
-
-
-
 #error {
     display: none;
 }
@@ -29,8 +26,28 @@ body {
     background: #223;
     background: -webkit-gradient(linear, left top, left bottom, from(#334), to(#112));
     background: -moz-linear-gradient(top,  #334,  #112);
-    text-shadow: #000 0 -2px 0;
+    /*text-shadow: #000 0 -2px 0;*/
 }
+
+img{
+	margin-left:10%;
+}
+
+table{
+	margin:auto;
+	border-collapse:collapse;
+	width:700px;
+	font-size:24.5px;
+}
+th {
+	border:2px solid #888;
+	text-align:center;
+}
+td{
+	border:2px solid #888;
+	text-align:center;
+}
+
 .bg {
     background-image: url("../img/wallpaper-slide.png");
     background-size:100% 100%;
@@ -60,12 +77,21 @@ body {
     z-index: 10;
 }
 
+.petit {
+	font-size:18px;
+}
+
 h1 {
 	text-align:center;
 	color:#53b0eb;
 }
+h2 {
+	text-align:center;
+	color:#ec8e53;
+}
 
 pre {
+	margin:auto;
     border: 2px solid #888;
 }
 pre > code {
