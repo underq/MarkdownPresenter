@@ -7,6 +7,13 @@
 
 !
 
+Views est utilisé par 461 860 sites dans le monde
+=================================================
+Combien on reflechit à leur choix ?
+----------------------------------
+
+!
+
 Drupal Graph
 ------------
 
@@ -18,6 +25,18 @@ Views Graph
 -----------
 
 ![Views](presentations/img/views_work.png)
+
+!
+
+Configuration d'exemple
+-----------------------
+
++ Drupal version : 7.15-dev
++ Default theme : bartik  
++ Apache : 2.2  
++ MySql : 5.1.59  
++ PHP version : 5.3.9  
++ OS : Windows 7  
 
 !
 
@@ -36,31 +55,52 @@ _[Source : Views project page.](http://drupal.org/project/views)_
 Special mode WTF!
 -----------------
 
-![Vache](presentations/img/special_mode.jpg)
+![Special Mode](presentations/img/special_mode.jpg)
+
+!
+
+Site designers
+==============
+
+> La création et la conception d'un site web est un processus qui implique quelques étapes simples au départ,
+> mais pouvant, sur un site abouti, mettre en œuvre des moyens et des compétences très importants. Un site web peut être une simple page au format HTML,
+> ou des milliers de pages proposant des animations, des services programmés en Java, PHP ou autre langage serveur, des formulaires supposant un traitement en JavaScript, ou AJAX.
+> Il peut reposer sur des technologies de bases de données, par exemple MySQL.
+
+_[Source : Wikipedia.](http://fr.wikipedia.org/wiki/Conception_de_site_web)_
+
 
 !
 
 try { $views }
 ==============
 
-Maitriser son application
--------------------------
+Maitriser ses modules
+---------------------
 
 <table>
+	<thead>
+		<tr>
+			<th></th>
+			<th>Views</th>
+			<th>API Drupal</th>
+		</tr>
+	</thead>
 	<tbody>
 		<tr>
-			<td colspan="2">Les informations affichées</td>
-		</tr>
-		<tr>
+			<td>Les informations affichées</td>
 			<td><img src="presentations/img/date_info.png" /></td>
 			<td><pre><code class="php bash">print date('Y-m-d');</code></pre></td>
 		</tr>
 		<tr>
-			<td colspan="2">Les requetes SQL</td>
-		</tr>
-		<tr>
+			<td>Les requetes SQL</td>
 			<td>NULL</td>
 			<td>Next Page</td>
+		</tr>
+		<tr>
+			<td>Les droits sur les champs</td>
+			<td>Par defaut</td>
+			<td>A faire à la main</td>
 		</tr>
 	</tbody>
 </table>
@@ -114,14 +154,15 @@ Gagner du temps
 
 + Durée de formation 1 jour avec Léon
 + 6 Mois d'utilisation de Views
++ Peu de temps pour se rendre compte que ça ne repond pas totalement aux besoins
 + 1 Jour de formation sur l'API drupal
 + 3 Mois pour remplacer tous les Views
 + Aussi longtemps que l'utilisation de Drupal
 
 !
 
-Industrialiser son application
-------------------------------
+Industrialiser son application (DevOps)
+---------------------------------------
 
 ### Avec Views.
 
@@ -133,7 +174,7 @@ drush features-update-all
 </code></pre>
 
 
-### Sans Views.
+### Avec l'API.
 
 <pre><code class="bash">git push origin master
 git pull origin master
@@ -151,12 +192,12 @@ if ($view = views_get_view($name)) {
 }
 </code></pre>
 + Views consome des requetes et de la memoire
-Executed 59 queries in 3770.44 ms.
 <pre><code class="bash">
+Executed 59 queries in 3770.44 ms.
 devel_boot()=2.75 MB, devel_shutdown()=30.13 MB.
 </code></pre>
 
-+ L'impacte de views, ctool, features :
++ L'impacte de views, ctools, features :
   + Si activé, page d'accueil : 21.45 MB
   + Si désactivé, page d'accueil : 19.97 MB
 
@@ -179,7 +220,10 @@ use Drupal\\Core\\DrupalKernel;
 + theme('table')
 + theme('list')
 + hook\_theme()
-+ [Render Arrays](http://drupal.org/node/930760)
++ [Render Arrays](http://drupal.org/node/930760)  
+***
+Et biensur il faut etendre l'API en fonction de vos besoins.
+------------------------------------------------------------
 
 !
 
@@ -251,7 +295,17 @@ return $build;
 You like the default front page view, but you find you want to sort it differently. (2/2)
 -----------------------------------------------------------------------------------------
 
-Views stat.
+<pre><code class="bash"># Page généré par Views.
+Executed 80 queries in 2060.1 ms.
+Page execution time was 2693.55 ms.
+devel_boot()=3.59 MB, devel_shutdown()=29.66 MB.
+</code></pre>
+***
+<pre><code class="bash"># Page de base de la taxonomy.
+Executed 60 queries in 1186.69 ms.
+Page execution time was 1651.38 ms.
+devel_boot()=3.59 MB, devel_shutdown()=21.36 MB.
+</code></pre>
 
 !
 
@@ -281,7 +335,7 @@ Executed 87 queries in 7410.77 ms.
 Page execution time was 8119.94 ms.
 devel_boot()=3.59 MB, devel_shutdown()=30.18 MB.
 </code></pre>
-
+***
 <pre><code class="bash"># Page de base de la taxonomy.
 Executed 66 queries in 71.37 ms.
 Page execution time was 479.23 ms.
@@ -294,8 +348,8 @@ Conclusion
 ==========
 
 + Qui utilise Views ?
-+ Qui à déja etait frustrer par views ? 
-+ Qui à déja fait du code custom pour hacker une view ?
++ Qui à déjà était frustrer par views ? 
++ Qui à déjà fait du code custom pour hacker une view ?
 
 !
 
